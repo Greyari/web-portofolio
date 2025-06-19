@@ -11,3 +11,10 @@ try {
 } catch (PDOException $e) {
     echo "❌ Gagal konek: " . $e->getMessage();
 }
+try {
+    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
+    echo "✅ Koneksi berhasil ke Railway MySQL!";
+} catch (PDOException $e) {
+    echo "❌ Gagal konek: " . $e->getMessage();
+}
+//tesdd
